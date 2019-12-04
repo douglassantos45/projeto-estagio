@@ -53,8 +53,12 @@
 </template>
 
 <script>
+
+import FormModal from '../FormModal'
+
 export default {
     name: 'FrequenciaPages',
+    components: { FormModal },
     data: function() {
         return {
 

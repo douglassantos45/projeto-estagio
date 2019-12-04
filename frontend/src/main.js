@@ -4,8 +4,10 @@ import Vue from 'vue'
 
 
 import './config/bootstrap'
-import App from './App'
+import AppNucleo from './AppNucleo'
 import AppAluno from './AppAluno'
+import AppLogin from './AppLogin'
+import AppOrientador from './AppOrientador'
 
 import store from './config/store'
 import router from './config/router'
@@ -15,11 +17,21 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-  render: h => h(App, AppAluno)
-}).$mount('#app', '#aluno')
+  render: h => h(AppNucleo)
+}).$mount('#nucleo')
 
 new Vue({
   router,
   store,
   render: h => h(AppAluno)
 }).$mount('#aluno')
+
+new Vue({
+  router,
+  render: h => h(AppLogin)
+}).$mount('#login')
+
+new Vue({
+  router,
+  render: h => h(AppOrientador)
+}).$mount('#orientador')

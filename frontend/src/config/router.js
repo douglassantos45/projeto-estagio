@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/components/assistente_nucleo/home/Home'
+import AssistenteNucleo from '@/components/assistente_nucleo/home/Home'
 import EmpresaPages from '@/components/assistente_nucleo/empresa/EmpresaPages'
 import EstagioPages from '@/components/assistente_nucleo/estagio/EstagioPages'
 import OrientadorPages from '@/components/assistente_nucleo/orientador/OrientadorPages'
@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 const routes = [{
     name: 'home',
     path: '/',
-    component: Home
+    component: AssistenteNucleo
 }, {
     name: 'empresaPages',
     path: '/empresas',

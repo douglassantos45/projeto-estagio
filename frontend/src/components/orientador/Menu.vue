@@ -1,13 +1,16 @@
 <template>
     <div>
         <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Manter Frequência</a>
+        <Title main="Manter Plano de Estágio" />
       </nav>
     </div>
 </template>
 
 <script>
+import Title from '../template/Title'
+
 export default {
+    components: { Title },
     name: 'Menu'
 }
 </script>

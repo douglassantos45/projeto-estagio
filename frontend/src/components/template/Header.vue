@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Menu from './Menu'
+import Menu from './Title'
 
 export default {
     name: 'Header',

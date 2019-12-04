@@ -18,7 +18,7 @@ import Footer  from "@/components/assistente_nucleo/template/Footer"
 
 
 export default {
-    name: "App",
+    name: "AppNucleo",
     components: { Header, Menu, Content, Footer },
     computed: mapState(['isMenuVisible'])
 }
