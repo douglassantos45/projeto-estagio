@@ -1,24 +1,19 @@
 <template>
   <div>
     <Header />
-    <b-form-group
-      id="fieldset-1"
-      description="Let us know your name."
-      label="Enter your name"
-      label-for="input-1"
-      :invalid-feedback="invalidFeedback"
-      :valid-feedback="validFeedback"
-      :state="state"
-    >
-      <b-form-input id="input-1" v-model="name" :state="state" trim></b-form-input>
-    </b-form-group>
+    <div>
+      <Content />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from '../../template/Header'
+
+import Header from '../Header'
+import Content from '../Content'
+
   export default {
-    components: { Header },
+    components: { Header, Content },
     name: 'EstagioPages',
     computed: {
       state() {

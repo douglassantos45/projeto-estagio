@@ -7,10 +7,8 @@
 </template>
 
 <script>
-import Title from '../template/Title'
 
 export default {
-    components: { Title },
     name: 'Menu'
 }
 </script>

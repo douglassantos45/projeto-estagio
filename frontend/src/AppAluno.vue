@@ -9,7 +9,7 @@
 
 <script>
 
-import Header  from "@/components/template/Header"
+import Header  from "@/components/aluno/Header"
 import Content from "@/components/aluno/Content"
 
 
