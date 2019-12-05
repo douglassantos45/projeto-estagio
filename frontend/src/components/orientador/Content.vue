@@ -52,7 +52,7 @@ export default {
           food: null,
           checked: []
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        foods: [{ text: 'Select One', value: null }, 'Carrot', 'Beans', 'Tomatoes', 'Corn'],
         show: true
       }
     },
