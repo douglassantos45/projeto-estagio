@@ -1,41 +1,21 @@
 <template>
   <div>
     <Header />
-    <div>
-      <Content />
-    </div>
+    <Content />
   </div>
 </template>
 
 <script>
 
-import Header from '../Header'
-import Content from '../Content'
+import Header from '../template/Header'
+import Content from '../template/Content'
 
   export default {
     components: { Header, Content },
     name: 'EstagioPages',
-    computed: {
-      state() {
-        return this.name.length >= 4 ? true : false
-      },
-      invalidFeedback() {
-        if (this.name.length > 4) {
-          return ''
-        } else if (this.name.length > 0) {
-          return 'Enter at least 4 characters'
-        } else {
-          return 'Please enter something'
-        }
-      },
-      validFeedback() {
-        return this.state === true ? 'Thank you' : ''
-      }
-    },
-    data() {
-      return {
-        name: ''
-      }
-    }
   }
 </script>
+
+<style>
+
+</style>
