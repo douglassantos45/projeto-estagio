@@ -8,6 +8,7 @@ import AppNucleo from './AppNucleo'
 import AppAluno from './AppAluno'
 import AppLogin from './AppLogin'
 import AppOrientador from './AppOrientador'
+import AppSupervisor from './AppSupervisor'
 
 import store from './config/store'
 import router from './config/router'
@@ -35,3 +36,8 @@ new Vue({
   router,
   render: h => h(AppOrientador)
 }).$mount('#orientador')
+
+new Vue({
+  router,
+  render: h => h(AppSupervisor)
+}).$mount('#supervisor')

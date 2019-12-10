@@ -1,26 +1,23 @@
 <template>
-<div>
-    <div class="content">
-    <div class="container">
-        <h3 class="h3 mb-3 card-body text-uppercase">plano de estágio supervisionado interno/externo</h3>
+  <div>
+    <div class="container ">
+        <h3 class="h3 mt-5 mb-3 card-body text-uppercase">instrumento de avaliação para o supervisor</h3>
         <div class="admin-pages-tabs">
             <b-card title="Card Title" no-body>
                 <b-tabs card>
-                    <b-tab title="Plano de Estágio">
+                    <b-tab title="Avaliação do Aluno">
                     <div>
                         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
                             <b-form-group id="input-group-4">
                                 <div class="form-group">
-                                    <label>Nome:</label><br>
-                                    <label for="">Professor Orientador:</label><br>
-                                    <label for="">Técnico Supervisor:</label><br>
+                                    <label>Estágiario:</label><br>
+                                    <label for="">Área de Estágio:</label><br>
+                                    <label for="">Supervisor:</label><br>
                                     <label for="">Período:</label>
                                 </div>
                             </b-form-group>
 
-                           <Objetivo /> 
-                           <Competencia />
-                           <Atividade />
+                           <Avaliacao />
 
                             <b-button type="submit" variant="success">Confirmar</b-button>
                             <b-button type="reset" variant="danger">Limpar</b-button>
@@ -34,23 +31,19 @@
     </div>
 
 </div>
-</div>
 </template>
 
 <script>
-import Atividade from '../planoEstagio/Atividade'
-import Objetivo from '../planoEstagio/Objetivo'
-import Competencia from '../planoEstagio/Competencia'
+import Avaliacao from '../avaliacao/Avaliacao'
 
 export default {
     name: 'Content',
-    components: { Atividade, Objetivo, Competencia },
+    components: { Avaliacao },
+    
      data() {
       return {
         form: {
-          email: '',
           name: '',
-          checked: []
         },
         show: true
       }
@@ -63,10 +56,7 @@ export default {
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.form.email = ''
         this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
@@ -78,9 +68,5 @@ export default {
 </script>
 
 <style>
-    .content {
-        margin-top: 350px;
-        padding: 0px;
-        width: 100%;
-    }
+
 </style>
