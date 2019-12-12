@@ -14,7 +14,7 @@
                           </ul>
                           <br>
                          <div class="input-group">
-                                <input v-model="entrada" type="text" class="form-control" placeholder="Horário da entrada">
+                                <input v-on:keyup.enter="addSaida(saida)" v-model="entrada" type="text" class="form-control" placeholder="Horário da entrada">
                                 <div class="input-group-append">
                                     <button v-on:click="addEntrada(entrada)" class="btn btn-info"><span class="fa fa-plus"></span></button>
                                 </div>
@@ -35,7 +35,7 @@
                           </ul>
                           <br>
                            <div class="input-group">
-                                <input v-model="saida" type="text" class="form-control" placeholder="Horário da entrada">
+                                <input v-on:keyup.enter="addSaida(saida)" v-model="saida" type="text" class="form-control" placeholder="Horário da entrada">
                                 <div class="input-group-append">
                                     <button v-on:click="addSaida(saida)" class="btn btn-info"><span class="fa fa-plus"></span></button>
                                 </div>
