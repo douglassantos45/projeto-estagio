@@ -11,6 +11,10 @@ export default new Vuex.Store({
             name: 'Assistente Núcleo',
             registration: 'assisnucleo@ifbaiano.com'
         },
+        user_aluno: {
+            name: 'Aluno',
+            registration: 'aluno@ifbaiano.com'
+        }
     },
     /*Alterna o estado do Menu*/
     mutations: {

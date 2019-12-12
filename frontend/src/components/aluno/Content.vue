@@ -11,7 +11,7 @@
 
 <script>
 
-import Table from './frequencia/FrequenciaPages'
+import Table from './frequencia/test'
 
 export default {
     name: 'Content',

@@ -15,6 +15,7 @@
                     id="my-table" :per-page="perPage"
                     :current-page="currentPage"
                     striped hover :items="items" :fields="fields">
+
                     <template slot="actions" slot-scope="data">
                         <a title="Visualizar" href="#" >
                             <i class="fa fa-picture-o mr-2"></i>
@@ -24,7 +25,7 @@
                         <a title="Editar" href="javascript:void(0)">
                             <i class="fa fa-edit mr-2 "></i>
                         </a>
-                        <a title="Remover" href="#">
+                        <a title="Remover" href="#" v-on:click="remove()">
                             <i class="fa fa-remove mr-2"></i>
                         </a>
                     </template>
@@ -81,6 +82,10 @@ export default {
         }
     },
     methods: {
+
+        remove() {
+            this.items = ''
+        }
     },
     computed: {
         rows() {

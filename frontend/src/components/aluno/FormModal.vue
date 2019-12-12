@@ -8,16 +8,16 @@
           <div class="form-row">
                 <div class="col">
                   <label for="">Entrada:</label>
-                  <input type="text"  v-model="form.entrada" required  class="form-control" placeholder="Informe a hora da entrada">
+                  <input type="text"  v-model="entrada" required  class="form-control" placeholder="Informe a hora da entrada">
                 </div>
               
                 <div class="col">
                   <label for="">Saída:</label>
-                  <input type="text"  v-model="form.saida" required  class="form-control" placeholder="Informe a hora de saída">
+                  <input type="text"  v-model="saida" required  class="form-control" placeholder="Informe a hora de saída">
                 </div>
           </div>
           <div class="mt-4">
-            <b-button type="submit" variant="success">Cadastrar</b-button>
+            <b-button type="submit" variant="success" v-on:click="addFrequencie(entrada, saida)">Cadastrar</b-button>
             <b-button type="reset" variant="danger">Limpar</b-button>
           </div>
         </b-form>
@@ -31,30 +31,15 @@
 export default {
     data() {
       return {
-        form: {
-          entrada: '',
-          saida: ' ',
-        },
+        entrada: '',
+        saida: ' ',
         show: true
       }
     },
     methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.entrada = ''
-        this.form.saida = ''
-  
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
+         addFrequencie(frequencie) {
+            this.frequencie.push(frequencie)
+        }
     }
 }
 </script>
