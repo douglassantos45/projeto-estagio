@@ -1,7 +1,7 @@
 <template>
   <!-- Implementando :class hide menu para o grid-->
-  <div>
-    
+  <div id="orientador">
+      <Header />
       <Content />
   </div>
  
@@ -9,12 +9,13 @@
 
 <script>
 
-import Content  from "@/components/orientador/planoEstagio/EstagioPages.vue"
+import Header from '@/components/orientador/template/Header'
+import Content  from "@/components/orientador/template/Content"
 
 
 export default {
     name: "AppOrientador",
-    components: { Content },
+    components: { Content, Header },
 }
 </script>
 

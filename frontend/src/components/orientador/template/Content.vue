@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="content">
+    <div id="content">
     <div class="container">
         <h3 class="h3 mb-3 card-body text-uppercase">plano de estágio supervisionado interno/externo</h3>
         <div class="admin-pages-tabs">
@@ -78,9 +78,7 @@ export default {
 </script>
 
 <style>
-    .content {
-        margin-top: 350px;
-        padding: 0px;
-        width: 100%;
-    }
+  #content {
+    margin-top: 100px;
+  }
 </style>
