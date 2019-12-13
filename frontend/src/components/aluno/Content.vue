@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="mt-0 px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-5">Conteúdo</h1>
+      <h1 class="display-5">Frequência</h1>
     </div>
     <div class="mt-0">
       <Table />
