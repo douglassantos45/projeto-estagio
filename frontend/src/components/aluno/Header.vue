@@ -1,7 +1,7 @@
 <template>
   <div>
       <div>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar toggleable="lg" class="fixed-top" type="dark" variant="info">
     <b-navbar-brand href="#">IF Baiano</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
