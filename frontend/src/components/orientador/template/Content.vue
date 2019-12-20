@@ -7,6 +7,12 @@
             <b-card title="Card Title" no-body>
                 <b-tabs card>
                     <b-tab title="Plano de Estágio">
+                      <div>
+                        <TableForm />
+                      </div>
+                    </b-tab>
+
+                    <b-tab title="Plano de Estágio" v-if="status">
                     <div>
                         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
                             <b-form-group id="input-group-4">
@@ -41,10 +47,11 @@
 import Atividade from '../planoEstagio/Atividade'
 import Objetivo from '../planoEstagio/Objetivo'
 import Competencia from '../planoEstagio/Competencia'
+import TableForm from './TableForm'
 
 export default {
     name: 'Content',
-    components: { Atividade, Objetivo, Competencia },
+    components: { Atividade, Objetivo, Competencia, TableForm },
      data() {
       return {
         form: {
