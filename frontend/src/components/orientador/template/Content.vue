@@ -11,10 +11,10 @@
                         <TableForm />
                       </div>
                     </b-tab>
-
-                    <b-tab title="Plano de Estágio" v-if="status">
+                  
+                    <b-tab title="Plano de Estágio" v-if="show" >
                     <div>
-                        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+                        <b-form @submit="onSubmit" @reset="onReset" >
                             <b-form-group id="input-group-4">
                                 <div class="form-group">
                                     <label>Nome:</label><br>
@@ -37,6 +37,9 @@
                 </b-tabs>
             </b-card>
         </div>
+          
+          <b-button @click="edit_Plano()">{{ text }}</b-button>
+
     </div>
 
 </div>
@@ -50,16 +53,18 @@ import Competencia from '../planoEstagio/Competencia'
 import TableForm from './TableForm'
 
 export default {
+   
     name: 'Content',
     components: { Atividade, Objetivo, Competencia, TableForm },
      data() {
       return {
+        text: 'Cadastrar',
         form: {
-          email: '',
-          name: '',
-          checked: []
+          competencias: '',
+          objetivo: '',
+          atividade: ''
         },
-        show: true
+        show: false
       }
     },
     methods: {
@@ -79,6 +84,15 @@ export default {
         this.$nextTick(() => {
           this.show = true
         })
+      },
+      edit_Plano() {
+        if(this.show == false) {
+          this.show = true;
+          this.text = 'Sair'
+        } else {
+          this.show = false;
+          this.text = 'Cadastrar'
+        }
       }
     }
 }
@@ -87,5 +101,6 @@ export default {
 <style>
   #content {
     margin-top: 100px;
+    margin-bottom: 50px;
   }
 </style>

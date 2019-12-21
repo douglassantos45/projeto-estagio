@@ -12,7 +12,7 @@
             </a>
             <b-button variante="info" class="btn btn-info btn-sm mr-1 circle" hidden>
             </b-button>
-            <a title="Editar" @click="edit_Plano()">
+            <a title="Editar" @click="edit_Plano(this)">
                 <i class="fa fa-edit mr-2 "></i>
             </a>
             <a title="Remover" href="#">
@@ -27,7 +27,7 @@
   export default {
     data() {
       return {
-        status: false,
+
         fields: [ //Alterar as descrição da tabela
           { key: 'id', sortable: true },
           { key: 'nome', label:'Estagiário', sortable: true },
@@ -47,6 +47,9 @@
     methods: {
       deletar(id) {
         this.items.splice(id, 1)
+      },
+      edit_Plano() {
+        this.show = true;
       }
     }
   }

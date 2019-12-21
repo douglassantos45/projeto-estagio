@@ -3,7 +3,7 @@
     <b-form-group id="input-group-4">
         <div class="form-group">
             <label>Objetivo</label>
-            <textarea class="form-control" id="objetivo" rows="3"></textarea>
+            <textarea class="form-control" value="objetivo" id="objetivo" rows="3"></textarea>
         </div>
     </b-form-group>
   </div>

@@ -5,7 +5,7 @@
             <label>Atividades a serem desenvolvidas</label>
             <div v-for="(formulario, id) in formulario" v-bind:key="id">
                 <div class="input-group mt-2">
-                    <input type="text" name="form[]" v-model="formulario.form" class="form-control col-6" placeholder="Horário da entrada">
+                    <input type="text" name="form[]" value="atividade" v-model="formulario.form" class="form-control col-6" placeholder="Atividade">
                     <div class="input-group-append">
                         <a class="btn btn-info text-white" @click="add_form(this)"><span class="fa fa-plus"></span></a>
 
@@ -16,6 +16,7 @@
             <br>
         <a v-if="status" class="btn btn-info text-white" @click="add_form(this)"><span class="fa fa-plus"></span></a>
         </div>
+        
     </b-form-group>
 </div>
 

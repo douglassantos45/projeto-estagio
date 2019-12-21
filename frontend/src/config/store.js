@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        
+
         /*Referenciando o usários do Header*/
         user_nucleo: {
             name: 'Assistente Núcleo',
@@ -15,7 +15,7 @@ export default new Vuex.Store({
     /*Alterna o estado do Menu*/
     mutations: {
         toggleMenu(state, isVisible) {
-            if(isVisible === undefined) {
+            if (isVisible === undefined) {
                 state.isMenuVisible = !state.isMenuVisible
             } else {
                 state.isMenuVisible = isVisible
