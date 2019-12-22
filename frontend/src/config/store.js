@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        
+        isMenuVisible: true,
         /*Referenciando o usários do Header*/
         user_nucleo: {
             name: 'Assistente Núcleo',
